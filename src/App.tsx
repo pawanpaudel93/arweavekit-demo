@@ -106,7 +106,7 @@ function App() {
             environment: "mainnet",
             options: {
               tags: [
-                { name: "App-Name", value: "Arweave-Kit-Demo" },
+                { name: "App-Name", value: "ArweaveKit-Demo" },
                 { name: "Content-Type", value: file.type },
               ],
               useBundlr: true,
@@ -169,7 +169,7 @@ function App() {
     try {
       const txs = await ardb
         .search("transactions")
-        .tag("App-Name", "Arweave-Kit-Demo")
+        .tag("App-Name", "ArweaveKit-Demo")
         .only("id")
         .findAll();
 
