@@ -12,7 +12,6 @@ import {
 import { useDropzone } from "react-dropzone";
 import { FormEvent, useEffect, useState } from "react";
 import "react-dropzone/examples/theme.css";
-import { useActiveAddress, useConnection } from "arweave-wallet-kit";
 import Arweave from "arweave";
 import ArDB from "ardb";
 import { createTransaction } from "arweavekit/transaction";
@@ -30,8 +29,6 @@ const ardb = new ArDB(arweave);
 function App() {
   const toast = useToast();
   const [isLoading, setIsLoading] = useState(false);
-  const { connected } = useConnection();
-  const activeAddress = useActiveAddress();
 
   const [files, setFiles] = useState<(File & { preview: string })[]>([]);
   const [uploadedUrls, setUploadedUrls] = useState<string[]>([]);
@@ -173,7 +170,6 @@ function App() {
       const txs = await ardb
         .search("transactions")
         .tag("App-Name", "Arweave-Kit-Demo")
-        .from(activeAddress as string)
         .only("id")
         .findAll();
 
@@ -190,11 +186,8 @@ function App() {
   }, [files]);
 
   useEffect(() => {
-    if (activeAddress) {
-      void fetchAllImages();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeAddress]);
+    void fetchAllImages();
+  }, []);
 
   return (
     <Container py={8} maxW="6xl">
@@ -216,7 +209,7 @@ function App() {
           </Box>
           <Button
             colorScheme="blue"
-            isDisabled={files.length === 0 || !connected}
+            isDisabled={files.length === 0}
             isLoading={isLoading}
             loadingText="Uploading"
             type="submit"

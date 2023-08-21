@@ -19,7 +19,6 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { ConnectButton } from "arweave-wallet-kit";
 
 interface NavItem {
   label: string;
@@ -72,22 +71,13 @@ export default function WithSubnavigation() {
             color={useColorModeValue("gray.800", "white")}
             fontWeight="bold"
           >
-            Arweave Wallet Kit Demo
+            Arweave Kit Demo
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <ConnectButton profileModal={true} showBalance={true} />
-        </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
