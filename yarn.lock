@@ -3176,24 +3176,9 @@ arweave@^1.10.13, arweave@^1.10.15, arweave@^1.10.16, arweave@^1.10.5, arweave@^
     base64-js "^1.5.1"
     bignumber.js "^9.0.2"
 
-"arweavekit@git+https://github.com/pawanpaudel93/arweavekit-fix-browser-issues.git":
+arweavekit@pawanpaudel93/arweavekit-fix-browser-issues:
   version "1.4.8"
-  uid "5dc5f276ab7fcf16d6d3dabca45cbfc56b28cb75"
-  resolved "git+https://github.com/pawanpaudel93/arweavekit-fix-browser-issues.git#5dc5f276ab7fcf16d6d3dabca45cbfc56b28cb75"
-  dependencies:
-    "@bundlr-network/client" "^0.11.12"
-    "@metamask/providers" "^11.1.0"
-    arweave "^1.13.5"
-    arweave-mnemonic-keys "^0.0.9"
-    ethers "^6.6.7"
-    graphql "^16.7.1"
-    othent "1.0.638"
-    warp-contracts "^1.4.1"
-    warp-contracts-plugin-deploy "^1.0.3"
-
-"arweavekit@https://github.com/pawanpaudel93/arweavekit-fix-browser-issues":
-  version "1.4.8"
-  resolved "https://github.com/pawanpaudel93/arweavekit-fix-browser-issues#5dc5f276ab7fcf16d6d3dabca45cbfc56b28cb75"
+  resolved "https://codeload.github.com/pawanpaudel93/arweavekit-fix-browser-issues/tar.gz/5dc5f276ab7fcf16d6d3dabca45cbfc56b28cb75"
   dependencies:
     "@bundlr-network/client" "^0.11.12"
     "@metamask/providers" "^11.1.0"
