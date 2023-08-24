@@ -16,7 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "ardb": "^1.1.10",
     "arweave": "^1.14.4",
-    "arweavekit": "github:pawanpaudel93/arweavekit-fix-browser-issues",
+    "arweavekit": "^1.4.9",
     "framer-motion": "^10.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
